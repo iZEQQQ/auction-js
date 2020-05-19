@@ -7,9 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>branches</title>
     <link rel="stylesheet" href="../main.css"/>
+    <script src="../resource/js/jquery-3.5.1.js"></script>
     <script src="../main.js"></script>
-    <link rel="stylesheet" href="list-branches.css"/>
-    <script src="list-branches.js"></script>
+    <link rel="stylesheet" href="view-branch.css"/>
+    <script src="view-branch.js"></script>
 </head>
 <body>
 <header>
@@ -18,12 +19,12 @@
 <nav>
     <ul>
         <li><a href="../index.html">Home</a></li>
-        <li><a href="list-branches.html">Branches</a></li>
+        <li><a href="../list-branches/list-branches.html">Branches</a></li>
     </ul>
 </nav>
 <section>
     <article>
-        <header><h2>Branches</h2></header>
+        <header><h2 id="branchName"></h2></header>
         <section>
             <table>
                 <thead>
@@ -32,13 +33,12 @@
                     <th>Name</th>
                     <th>Edit</th>
                     <th>Delete</th>
-                    <th>View</th>
                 </tr>
                 </thead>
-                <tbody id="branchesData"></tbody>
+                <tbody id="categoryData"></tbody>
                 <tfoot></tfoot>
             </table>
-            <a href="../edit-branch/edit-branch.html">New</a>
+<!--            <a href="../edit-branch/edit-branch.html">New</a>-->
         </section>
     </article>
 </section>

@@ -53,6 +53,13 @@ function renderRow(branch, tr) {
     tdDelete.appendChild(buttonDelete);
     tr.appendChild(tdDelete);
 
+    let tdView = document.createElement('td');
+    let buttonView = document.createElement('button');
+    let textView = document.createTextNode('View');
+    buttonView.appendChild(textView);
+    tdView.appendChild(buttonView);
+    tr.appendChild(tdView);
+
     buttonDelete.onclick = function () {
         deleteBranch(branch.id);
     }
@@ -60,6 +67,12 @@ function renderRow(branch, tr) {
     buttonEdit.onclick = function () {
         window.location.replace('../edit-branch/edit-branch.html?id=' + branch.id);
     }
+
+    buttonView.onclick = function () {
+        window.location.replace('../view-branch/view-branch.html?id=' + branch.id);
+    }
+
+
 }
 
 function deleteBranch(id) {
