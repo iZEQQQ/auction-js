@@ -57,6 +57,9 @@ function renderRow(branch, tr) {
         deleteBranch(branch.id);
     }
 
+    buttonEdit.onclick = function () {
+        window.location.replace('../edit-branch/edit-branch.html?id=' + branch.id);
+    }
 }
 
 function deleteBranch(id) {
