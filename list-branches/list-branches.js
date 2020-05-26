@@ -1,6 +1,5 @@
 window.onload = function () {
     fetchBranches();
-
 };
 
 function renderTable(branches) {
